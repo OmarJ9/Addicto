@@ -5,6 +5,7 @@ import 'package:addicto/src/Constants/themes.dart';
 import 'package:addicto/src/Models/challenge_model.dart';
 import 'package:addicto/src/Provider/home_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
 
@@ -14,6 +15,9 @@ void main() async {
   Hive.registerAdapter(ChallengeAdapter());
   await Hive.openBox('primitiveBox');
   await Hive.openBox('challengeBox');
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky, overlays: [
+    SystemUiOverlay.bottom,
+  ]);
 
   runApp(
     ChangeNotifierProvider(

@@ -1,7 +1,7 @@
-import 'package:addicto/src/Constants/colors.dart';
 import 'package:addicto/src/Provider/home_provider.dart';
 import 'package:addicto/src/Services/hive_helper.dart';
 import 'package:addicto/src/Widgets/challenge_item.dart';
+import 'package:addicto/src/Widgets/mydrawer.dart';
 import 'package:addicto/src/Widgets/myflat_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -18,6 +18,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   void initState() {
     if (context.read<HomeProvider>().isrunning) {
@@ -33,16 +35,20 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Consumer<HomeProvider>(
       builder: (context, provider, child) => Scaffold(
-        backgroundColor: MyColors.green,
+        key: _scaffoldKey,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        drawer: const MyDrawer(),
+        drawerScrimColor: Colors.transparent,
         body: SafeArea(
           child: Column(
             children: <Widget>[
-              SizedBox(
+              Container(
+                color: const Color.fromARGB(255, 13, 116, 50),
                 height: SizeConfig.heightMultiplier * 45,
                 width: double.infinity,
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,10 +56,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Icon(
-                            FontAwesomeIcons.bars,
-                            color: Colors.white,
-                            size: SizeConfig.textMultiplier * 4,
+                          InkWell(
+                            onTap: () {
+                              _scaffoldKey.currentState!.openDrawer();
+                            },
+                            child: Icon(
+                              FontAwesomeIcons.bars,
+                              color: Colors.white,
+                              size: SizeConfig.textMultiplier * 4,
+                            ),
                           ),
                           (!provider.isrunning)
                               ? MyPopUpButton(
@@ -102,50 +113,60 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               Expanded(
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(
-                        SizeConfig.textMultiplier * 4,
-                      ),
-                      topRight: Radius.circular(
-                        SizeConfig.textMultiplier * 4,
-                      ),
+                child: Stack(
+                  children: [
+                    Container(
+                      color: const Color.fromARGB(255, 13, 116, 50),
                     ),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: SizeConfig.textMultiplier * 3,
-                      vertical: SizeConfig.textMultiplier * 3,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Challenges That You Won :',
-                          style:
-                              Theme.of(context).textTheme.headline1!.copyWith(
-                                    fontSize: SizeConfig.textMultiplier * 2,
-                                  ),
+                    Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).scaffoldBackgroundColor,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(
+                            SizeConfig.textMultiplier * 4,
+                          ),
+                          topRight: Radius.circular(
+                            SizeConfig.textMultiplier * 4,
+                          ),
                         ),
-                        SizedBox(height: SizeConfig.heightMultiplier * 3),
-                        Expanded(
-                            child: ListView.builder(
-                          physics: const BouncingScrollPhysics(),
-                          itemCount: provider.challenges.length,
-                          itemBuilder: (context, index) {
-                            return ChallengeItem(
-                                index: index,
-                                challengedays:
-                                    provider.challenges[index].challengedays,
-                                date: provider.challenges[index].finisheddate);
-                          },
-                        ))
-                      ],
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: SizeConfig.textMultiplier * 3,
+                          vertical: SizeConfig.textMultiplier * 3.5,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Challenges That You Won :',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headline1!
+                                  .copyWith(
+                                    fontSize: SizeConfig.textMultiplier * 2.3,
+                                  ),
+                            ),
+                            SizedBox(height: SizeConfig.heightMultiplier * 3),
+                            Expanded(
+                                child: ListView.builder(
+                              physics: const BouncingScrollPhysics(),
+                              itemCount: provider.challenges.length,
+                              itemBuilder: (context, index) {
+                                return ChallengeItem(
+                                    index: index,
+                                    challengedays: provider
+                                        .challenges[index].challengedays,
+                                    date: provider
+                                        .challenges[index].finisheddate);
+                              },
+                            ))
+                          ],
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ),
 
