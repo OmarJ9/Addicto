@@ -1,5 +1,5 @@
 import 'package:addicto/src/Provider/home_provider.dart';
-import 'package:addicto/src/Services/hive_helper.dart';
+import 'package:addicto/src/Utils/Services/hive_helper.dart';
 import 'package:addicto/src/Widgets/challenge_item.dart';
 import 'package:addicto/src/Widgets/mydrawer.dart';
 import 'package:addicto/src/Widgets/myflat_button.dart';
@@ -34,13 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeProvider>(
-      builder: (context, provider, child) => Scaffold(
-        key: _scaffoldKey,
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        drawer: const MyDrawer(),
-        drawerScrimColor: Colors.transparent,
-        body: SafeArea(
-          child: Column(
+      builder: (context, provider, child) => SafeArea(
+        child: Scaffold(
+          key: _scaffoldKey,
+          backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+          drawer: const MyDrawer(),
+          drawerScrimColor: Colors.transparent,
+          body: Column(
             children: <Widget>[
               Container(
                 color: const Color.fromARGB(255, 13, 116, 50),

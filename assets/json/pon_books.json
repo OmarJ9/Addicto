@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Sex Addiction 101",
+        "author": "Robert Weiss",
+        "date": "Oct 27, 2015",
+        "rate": 4.0,
+        "description": "A Basic Guide to Healing from Sex, Porn, and Love Addiction.",
+        "img": "https://img.readthistwice.com/unsafe/240x360/books/f1a40600-11aa-4e19-a21b-ac041ca39581.jpg",
+        "amazon": "https://www.amazon.com/dp/0757318436?tag=readthistwice-20&linkCode=ogi&th=1&psc=1"
+    },
+    {
+        "name": "Your Brain on Porn",
+        "author": "Gary Wilson",
+        "date": "Feb 12, 2015",
+        "rate": 4.2,
+        "description": "Internet Pornography and the Emerging Science of Addiction.",
+        "img": "https://img.readthistwice.com/unsafe/240x360/books/0bb9730e-ae85-4fbb-a65e-6b354fed196d.jpg",
+        "amazon": "https://www.amazon.com/dp/099316160X?tag=readthistwice-20&linkCode=ogi&th=1&psc=1"
+    },
+    {
+        "name": "The Porn Myth",
+        "author": "Matt Fradd",
+        "date": "Mar 15, 2017",
+        "rate": 4.1,
+        "description": "Exposing the Reality Behind the Fantasy of Pornography.",
+        "img": "https://img.readthistwice.com/unsafe/240x360/books/135a74f5-5c39-43a9-929d-3a37d23ca5af.jpg",
+        "amazon": "https://www.amazon.com/dp/162164006X?tag=readthistwice-20&linkCode=ogi&th=1&psc=1"
+    },
+    {
+        "name": "Life After Lust",
+        "author": "Forest Benedict",
+        "date": "Mar 15, 2017",
+        "rate": 4.2,
+        "description": "Stories & Strategies for Sex & Pornography Addiction Recovery,",
+        "img": "https://img.readthistwice.com/unsafe/240x360/books/417ff580-5f81-4517-878f-f836ab34da45.jpg",
+        "amazon": "https://www.amazon.com/dp/0998468215?tag=readthistwice-20&linkCode=ogi&th=1&psc=1"
+    },
+    {
+        "name": "The Porn Trap",
+        "author": "Wendy Maltz",
+        "date": "Jan 01, 2010",
+        "rate": 3.9,
+        "description": "The Essential Guide to Overcoming Problems Caused by Pornography.",
+        "img": "https://img.readthistwice.com/unsafe/240x360/books/92603b13-a33e-474b-a68b-dbf9db07651b.jpg",
+        "amazon": "https://www.amazon.com/dp/0061231878?tag=readthistwice-20&linkCode=ogi&th=1&psc=1"
+    }
+]

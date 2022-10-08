@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:addicto/src/Models/challenge_model.dart';
 import 'package:addicto/src/Widgets/myawesome_dialog.dart';
 import 'package:flutter/widgets.dart';
-import '../Services/hive_helper.dart';
+import '../Utils/Services/hive_helper.dart';
 
 class HomeProvider with ChangeNotifier {
   static int challengedays = 2;

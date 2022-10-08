@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Rebalancing The Addictive Mind",
+        "author": "Rochelle Poerio",
+        "date": "Jan 27, 2014",
+        "rate": 4.5,
+        "description": "A Basic Guide to Beating Addiction with Exercise and Nutrition.",
+        "img": "https://m.media-amazon.com/images/I/51adaA2zstL.jpg",
+        "amazon": "https://www.amazon.com/dp/1500444561?tag=uuid10-20"
+    },
+    {
+        "name": "The Drug Addiction Cure",
+        "author": "Josh David",
+        "date": "Aug 12, 2014",
+        "rate": 4.4,
+        "description": "What does drug addiction mean and to overcome any drug addiction for life.",
+        "img": "https://m.media-amazon.com/images/I/51XhgMmzPCL.jpg",
+        "amazon": "https://www.amazon.com/dp/1515308855?tag=uuid10-20"
+    },
+    {
+        "name": "How to Quit Cigarette",
+        "author": "Henry Lee",
+        "date": "Jan 30, 2020",
+        "rate": 4.7,
+        "description": "A 4-Week Step-by-Step Guide to Quitting Smoking Naturally and Get Healthier in the Process.",
+        "img": "https://m.media-amazon.com/images/I/41zzUrgXdPL.jpg",
+        "amazon": "https://www.amazon.com/dp/B08DBHD1FQ?tag=uuid10-20"
+    },
+    {
+        "name": "The Addiction Solution",
+        "author": "Lloyd Sederer",
+        "date": "Apr 02, 2018",
+        "rate": 4.1,
+        "description": "Treating our Dependence on drugs.",
+        "img": "https://m.media-amazon.com/images/I/51uNmRusJ4L.jpg",
+        "amazon": "https://www.amazon.com/dp/1501179446?tag=uuid10-20"
+    },
+    {
+        "name": "Quit Smoking",
+        "author": "Tyrone Stalcup",
+        "date": "Sep 07, 2021",
+        "rate": 3.2,
+        "description": "Stop Smoking the Easy Way & Overcome Your Smoking Addiction for Life.",
+        "img": "https://m.media-amazon.com/images/I/41fTHXFuzWL._SL500_.jpg",
+        "amazon": "https://www.amazon.com/dp/1774851105?tag=uuid10-20"
+    }
+]

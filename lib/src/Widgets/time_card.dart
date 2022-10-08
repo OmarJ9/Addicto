@@ -12,9 +12,8 @@ class TimeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Material(
-          elevation: 40,
-          borderRadius: BorderRadius.circular(5),
+        Card(
+          margin: EdgeInsets.zero,
           child: Padding(
             padding: const EdgeInsets.all(10),
             child: Text(
@@ -26,7 +25,7 @@ class TimeCard extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: SizeConfig.heightMultiplier * 2),
+        SizedBox(height: SizeConfig.heightMultiplier * 1),
         Text(title,
             style: TextStyle(
                 fontWeight: FontWeight.bold,

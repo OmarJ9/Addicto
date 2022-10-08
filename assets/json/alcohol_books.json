@@ -1,0 +1,29 @@
+[
+    {
+        "name": "The Cure for Alcoholism",
+        "author": "Roy Eskapa",
+        "date": "Oct 23, 2012",
+        "rate": 4.7,
+        "description": "The Medically Proven Way to Eliminate Alcohol Addiction.",
+        "img": "https://m.media-amazon.com/images/I/41fBegCmSES._SX331_BO1,204,203,200_.jpg",
+        "amazon": "https://www.amazon.com/Cure-Alcoholism-Medically-Eliminate-Addiction/dp/1937856135"
+    },
+    {
+        "name": "The Naked Mind",
+        "author": "Annie Grace",
+        "date": "Feb 12, 2018",
+        "rate": 4.8,
+        "description": "Control Alcohol, Find Freedom, Discover Happiness & Change Your Life.",
+        "img": "https://m.media-amazon.com/images/I/41hdZwgcnKL._SX360_BO1,204,203,200_.jpg",
+        "amazon": "https://www.amazon.com/This-Naked-Mind-Discover-Happiness/dp/0525537236/ref=zg_bs_4719_sccl_2/144-2562497-7721932?pd_rd_i=0525537236&psc=1"
+    },
+    {
+        "name": "Quit Like a Woman",
+        "author": "Holly Whitaker",
+        "date": "Jan 12, 2021",
+        "rate": 4.9,
+        "description": "The Radical Choice to Not Drink in a Culture Obsessed with Alcohol.",
+        "img": "https://m.media-amazon.com/images/I/51ptOk9eTUL._SX322_BO1,204,203,200_.jpg",
+        "amazon": "https://www.amazon.com/Quit-Like-Woman-Radical-Obsessed/dp/1984825070/ref=zg_bs_4719_sccl_8/144-2562497-7721932?pd_rd_i=1984825070&psc=1"
+    }
+]

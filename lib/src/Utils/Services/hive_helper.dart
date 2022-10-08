@@ -1,6 +1,6 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
-import '../Models/challenge_model.dart';
+import '../../Models/challenge_model.dart';
 
 class HiveHelper {
   static Box myprimitivebox = Hive.box('primitiveBox');

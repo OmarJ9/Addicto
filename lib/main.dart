@@ -3,6 +3,7 @@ import 'package:addicto/src/Config/size.dart';
 import 'package:addicto/src/Constants/strings.dart';
 import 'package:addicto/src/Constants/themes.dart';
 import 'package:addicto/src/Models/challenge_model.dart';
+import 'package:addicto/src/Provider/books_provider.dart';
 import 'package:addicto/src/Provider/home_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,10 +21,12 @@ void main() async {
   ]);
 
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => HomeProvider()..init(),
-      child: const MyApp(),
-    ),
+    MultiProvider(providers: [
+      ChangeNotifierProvider<HomeProvider>(
+          create: (_) => HomeProvider()..init()),
+      ChangeNotifierProvider<BooksProvider>(
+          create: (_) => BooksProvider()..init(), lazy: false),
+    ], child: const MyApp()),
   );
 }
 

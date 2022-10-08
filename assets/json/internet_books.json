@@ -1,0 +1,38 @@
+[
+    {
+        "name": "The Facebook Diet",
+        "author": "Gemini Adams",
+        "date": "May 24, 2013",
+        "rate": 3.9,
+        "description": "50 Funny Signs of Facebook Addiction and Ways to Unplug with a Digital Detox.",
+        "img": "https://m.media-amazon.com/images/I/51LQD7PSZJL._SY364_BO1,204,203,200_.jpg",
+        "amazon": "https://www.amazon.com/Facebook-Diet-Addiction-Unplug-Digital/dp/095546563X/ref=sr_1_1?s=books&ie=UTF8&qid=1502357798&sr=1-1&keywords=The+Facebook+Diet%2C+Gemini+Adams"
+    },
+    {
+        "name": "Internet and Tech Addiction",
+        "author": "Josh David",
+        "date": "Feb 01, 2019",
+        "rate": 4.1,
+        "description": "Breakthroughs in Research and Practice.",
+        "img": "https://m.media-amazon.com/images/I/41BO1tRfQKL._SL500_.jpg",
+        "amazon": "https://www.amazon.com/dp/1522589007?tag=uuid10-20"
+    },
+    {
+        "name": "Internet Addiction in Children",
+        "author": "Jordan Belzec",
+        "date": "Oct 8, 2019",
+        "rate": 4.1,
+        "description": "Managing balance in internet usage for children.",
+        "img": "https://m.media-amazon.com/images/I/41WnRqTgRyL.jpg",
+        "amazon": "https://www.amazon.com/dp/1712072587?tag=uuid10-20"
+    },
+    {
+        "name": "Irresistible",
+        "author": "Adam Alter",
+        "date": "Jan 29, 2017",
+        "rate": 4.2,
+        "description": "The Rise of Addictive Technology and the Business of Keeping Us Hooked.",
+        "img": "https://m.media-amazon.com/images/I/41gW5ttHucL._SL500_.jpg",
+        "amazon": "https://www.amazon.com/dp/1594206643?tag=uuid10-20"
+    }
+]
