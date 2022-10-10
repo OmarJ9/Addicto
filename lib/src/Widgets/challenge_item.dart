@@ -16,13 +16,13 @@ class ChallengeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier * 1),
+      margin: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier * 1.2),
       color: index < MyColors.mycolors.length
           ? MyColors.mycolors[index]
           : MyColors.mycolors[5],
       child: Padding(
         padding: EdgeInsets.symmetric(
-          vertical: SizeConfig.heightMultiplier * 1.4,
+          vertical: SizeConfig.heightMultiplier * 2,
           horizontal: SizeConfig.widthMultiplier * 1.4,
         ),
         child: Row(

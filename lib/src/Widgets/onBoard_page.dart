@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:addicto/src/Constants/consts_variables.dart';
 import '../Config/size.dart';

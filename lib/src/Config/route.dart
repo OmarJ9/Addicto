@@ -1,3 +1,4 @@
+import 'package:addicto/src/Screens/categories_screen.dart';
 import 'package:addicto/src/Screens/books_screen.dart';
 import 'package:addicto/src/Screens/onboarding_screen.dart';
 import 'package:addicto/src/Screens/quotes_screen.dart';
@@ -26,7 +27,15 @@ class AppRoute {
         }
       case testscreen:
         {
-          return MaterialPageRoute(builder: (_) => const TestScreen());
+          final questions = settings.arguments as List<String>;
+          return MaterialPageRoute(
+              builder: (_) => TestScreen(
+                    questions: questions,
+                  ));
+        }
+      case testwelcomescreen:
+        {
+          return MaterialPageRoute(builder: (_) => const CategoriesScreen());
         }
       case quotescreen:
         {

@@ -23,7 +23,7 @@ class MyDrawerItem extends StatelessWidget {
           ),
           Text(
             title,
-            style: Theme.of(context).textTheme.subtitle1!.copyWith(
+            style: Theme.of(context).textTheme.headline1!.copyWith(
                 fontSize: SizeConfig.textMultiplier * 1.7, color: Colors.white),
           ),
         ],

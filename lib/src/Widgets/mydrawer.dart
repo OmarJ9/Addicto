@@ -70,7 +70,7 @@ class MyDrawer extends StatelessWidget {
               child: Column(
                 children: [
                   MyDrawerItem(
-                    icon: FontAwesomeIcons.clockRotateLeft,
+                    icon: Icons.timer,
                     title: 'Countdown Timer',
                     func: () {
                       Navigator.popAndPushNamed(context, homescreen);
@@ -92,10 +92,10 @@ class MyDrawer extends StatelessWidget {
                     height: 30,
                   ),
                   MyDrawerItem(
-                    icon: FontAwesomeIcons.checkToSlot,
+                    icon: Icons.quiz,
                     title: 'Addiction Test',
                     func: () {
-                      Navigator.popAndPushNamed(context, testscreen);
+                      Navigator.popAndPushNamed(context, testwelcomescreen);
                     },
                   ),
                   const Divider(
