@@ -13,7 +13,6 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    HomeProvider provider = Provider.of<HomeProvider>(context, listen: false);
     return Padding(
       padding: EdgeInsets.only(
         top: SizeConfig.heightMultiplier * 10,

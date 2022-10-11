@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import '../Config/size.dart';
+import '../Utils/Services/awesome_notifications.dart';
 import '../Widgets/mypopup_button.dart';
 import '../Widgets/time_card.dart';
 
@@ -91,9 +92,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         func: () {
                           if (provider.isrunning) {
                             provider.canceltimer();
+                            NotificationsHandler()
+                                .cancelScheduledNotifications();
                             HiveHelper().savePrimitives('isrunning', false);
                           } else {
                             provider.startTimer(context);
+                            NotificationsHandler().createNotification(
+                                provider.countdownduration.inSeconds);
                             HiveHelper().savePrimitives('isrunning', true);
                             DateTime dateTime = DateTime.now();
                             HiveHelper()

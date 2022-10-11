@@ -5,6 +5,7 @@ import 'package:addicto/src/Constants/themes.dart';
 import 'package:addicto/src/Models/challenge_model.dart';
 import 'package:addicto/src/Provider/books_provider.dart';
 import 'package:addicto/src/Provider/home_provider.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -12,6 +13,21 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  AwesomeNotifications().initialize(
+    null,
+    [
+      NotificationChannel(
+        channelKey: 'basic_channel',
+        channelName: 'Basic Notifications',
+        channelDescription: 'Notification channel for basic tests',
+        importance: NotificationImportance.High,
+        channelShowBadge: true,
+        locked: false,
+      ),
+    ],
+  );
+
   await Hive.initFlutter();
   Hive.registerAdapter(ChallengeAdapter());
   await Hive.openBox('primitiveBox');
