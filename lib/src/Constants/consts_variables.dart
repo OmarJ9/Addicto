@@ -1,6 +1,7 @@
 import 'package:addicto/src/Config/size.dart';
 import 'package:addicto/src/Constants/assets_path.dart';
 import 'package:addicto/src/Models/onboarding_model.dart';
+import 'package:addicto/src/Models/quote_model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -109,4 +110,49 @@ List<List<String>> addictionquestions = [
     'Do you keep watching nonsense videos ?',
     'Do you think you are addicted to internet ?',
   ]
+];
+List<QuoteModel> myquotes = [
+  QuoteModel(
+    quote: "It Does Not Matter How Slowly You Go As Long As You Do Not Stop.",
+    author: "Confucius",
+  ),
+  QuoteModel(
+    quote:
+        "Recovery Is An Acceptance That Your Life Is In Shambles And You Have To Change.",
+    author: "Jamie Lee",
+  ),
+  QuoteModel(
+    quote: "Recovery Is Something That You Have To Work On Every Single Day",
+    author: "Demi Lovato",
+  ),
+  QuoteModel(
+    quote:
+        "Recovery Is Not For People Who Need It, It's For People Who Want It.",
+    author: "Anonymous",
+  ),
+  QuoteModel(
+    quote: "Quitting smoking is easy. I've done it a hundred times.",
+    author: "Mark Twain",
+  ),
+  QuoteModel(
+    quote: "If you can quit for a day, you can quit for a lifetime.",
+    author: "Benjamine Alire",
+  ),
+  QuoteModel(
+    quote: "Fall seven times, stand up eight.",
+    author: "Japanese Proverb",
+  ),
+  QuoteModel(
+    quote: "One of the hardest things was learning that I was worth recovery.",
+    author: "Demi Lovato",
+  ),
+  QuoteModel(
+    quote:
+        "You can get the monkey off your back, but the circus never leaves town.",
+    author: "Anne Lamott",
+  ),
+  QuoteModel(
+    quote: "Once you learn to quit, it becomes a habit.",
+    author: "Vince Lombardi",
+  ),
 ];

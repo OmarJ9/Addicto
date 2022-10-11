@@ -39,13 +39,16 @@ class MyApp extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         SizeConfig().init(constraints);
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
-          theme: MyThemes.light,
-          darkTheme: MyThemes.dark,
-          onGenerateRoute: AppRoute().generateRoute,
-          initialRoute: homescreen,
+        return Consumer<HomeProvider>(
+          builder: (context, provider, child) => MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            theme: MyThemes.light,
+            darkTheme: MyThemes.dark,
+            themeMode: provider.isDark ? ThemeMode.dark : ThemeMode.light,
+            onGenerateRoute: AppRoute().generateRoute,
+            initialRoute: provider.seen ? homescreen : onboarding,
+          ),
         );
       },
     );

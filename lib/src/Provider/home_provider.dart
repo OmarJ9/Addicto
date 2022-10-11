@@ -14,6 +14,8 @@ class HomeProvider with ChangeNotifier {
   late Duration _countdownduration;
   late bool isrunning;
   late List<Challenge> challenges;
+  late bool _isDark;
+  late bool _seen;
 
   Timer? get getTimer => _timer;
   String get days => _days;
@@ -21,10 +23,14 @@ class HomeProvider with ChangeNotifier {
   String get minutes => _minutes;
   String get seconds => _seconds;
   Duration get countdownduration => _countdownduration;
+  bool get isDark => _isDark;
+  bool get seen => _seen;
 
   void init() {
     /* This bool is used so that the countdown can start automatically
      if it has already started */
+    _isDark = HiveHelper.myprimitivebox.get('isdark') ?? false;
+    _seen = HiveHelper.myprimitivebox.get('seen') ?? false;
     isrunning = HiveHelper.myprimitivebox.get('isrunning') ?? false;
     final date =
         DateTime.parse(HiveHelper.myprimitivebox.get('mydate').toString());
@@ -91,6 +97,12 @@ class HomeProvider with ChangeNotifier {
     challengedays = value;
     _countdownduration = Duration(days: challengedays);
     _days = challengedays.toString().padLeft(2, '0');
+    notifyListeners();
+  }
+
+  void changetheme(bool value) {
+    _isDark = value;
+    HiveHelper().savePrimitives('isdark', value);
     notifyListeners();
   }
 }

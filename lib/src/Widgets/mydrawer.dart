@@ -2,15 +2,18 @@ import 'package:addicto/src/Config/size.dart';
 import 'package:addicto/src/Constants/assets_path.dart';
 import 'package:addicto/src/Constants/colors.dart';
 import 'package:addicto/src/Constants/strings.dart';
+import 'package:addicto/src/Provider/home_provider.dart';
 import 'package:addicto/src/Widgets/drawer_item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
+    HomeProvider provider = Provider.of<HomeProvider>(context, listen: false);
     return Padding(
       padding: EdgeInsets.only(
         top: SizeConfig.heightMultiplier * 10,
@@ -112,6 +115,26 @@ class MyDrawer extends StatelessWidget {
                   const Divider(
                     color: Colors.grey,
                     height: 30,
+                  ),
+                  Consumer<HomeProvider>(
+                    builder: (context, myprovider, child) {
+                      return SwitchListTile(
+                        value: myprovider.isDark,
+                        activeColor: Colors.green,
+                        title: Text(
+                          'Dark Mode',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline1!
+                              .copyWith(
+                                  fontSize: SizeConfig.textMultiplier * 1.7,
+                                  color: Colors.white),
+                        ),
+                        onChanged: (value) {
+                          myprovider.changetheme(value);
+                        },
+                      );
+                    },
                   ),
                 ],
               ),

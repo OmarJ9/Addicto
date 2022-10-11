@@ -1,6 +1,7 @@
 import 'package:addicto/src/Config/size.dart';
 import 'package:addicto/src/Constants/colors.dart';
 import 'package:addicto/src/Constants/strings.dart';
+import 'package:addicto/src/Utils/Services/hive_helper.dart';
 import 'package:addicto/src/Widgets/mycircular_button.dart';
 import 'package:addicto/src/Widgets/myflat_button.dart';
 import 'package:addicto/src/Widgets/onBoard_page.dart';
@@ -71,6 +72,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ? MyFlatButton(
                       title: 'Get Started',
                       func: () {
+                        HiveHelper().savePrimitives('seen', true);
                         Navigator.pushReplacementNamed(context, homescreen);
                       },
                       color: MyColors.green,
