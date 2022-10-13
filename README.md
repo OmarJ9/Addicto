@@ -1,16 +1,25 @@
-# addicto
+# 🔥 Addicto App
 
-A new Flutter project.
+An App to Challenge your addiction. It includes some tools that will help you with your addiction.
 
-## Getting Started
+Star⭐ the repo if you like what you see😉.
 
-This project is a starting point for a Flutter application.
+## ✨ Features :
+- Countdown Timer .
+- Top recommended books about addiction.
+- Visit the original website of the book with Flutter WebView.
+- A quiz to test addiction.
+- Beautiful UI.
 
-A few resources to get you started if this is your first Flutter project:
+## 📸 Screenshots :
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshots/image 1.png" width="300"> <img src="screenshots/image 2.png" width="300"> <img src="screenshots/image 3.png" width="300">
+<img src="screenshots/image 4.png" width="300"> <img src="screenshots/image 5.png" width="300"> <img src="screenshots/image 6.png" width="300"> <img src="screenshots/image 7.png" width="300">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**=> The 1st Onboarding img is from (<a href="https://storyset.com/people">People illustrations by Storyset</a>)**
+
+**=> The 2nd Onboarding img is from (<a href="https://storyset.com/group">Group illustrations by Storyset</a>)**
+
+**=> The 3rd Onboarding img is from (<a href="https://storyset.com/people">People illustrations by Storyset</a>)**
+
+**=> The img used in the drawer is from [Robert Nickson](https://www.pexels.com/photo/brown-mountains-2559941/)**
