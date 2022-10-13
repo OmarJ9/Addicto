@@ -1,5 +1,5 @@
 import 'package:addicto/src/Config/size.dart';
-import 'package:addicto/src/Constants/colors.dart';
+import 'package:addicto/src/Utils/Helpers/color_generator.dart';
 import 'package:flutter/material.dart';
 
 class ChallengeItem extends StatelessWidget {
@@ -17,9 +17,8 @@ class ChallengeItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       margin: EdgeInsets.symmetric(vertical: SizeConfig.heightMultiplier * 1.2),
-      color: index < MyColors.mycolors.length
-          ? MyColors.mycolors[index]
-          : MyColors.mycolors[5],
+      // This function is used to generate random colors from a map of colors
+      color: ColorGenerator().generatecolor(index),
       child: Padding(
         padding: EdgeInsets.symmetric(
           vertical: SizeConfig.heightMultiplier * 2,

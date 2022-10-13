@@ -13,7 +13,6 @@ import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   AwesomeNotifications().initialize(
     null,
     [
@@ -32,6 +31,8 @@ void main() async {
   Hive.registerAdapter(ChallengeAdapter());
   await Hive.openBox('primitiveBox');
   await Hive.openBox('challengeBox');
+
+  // This line is used to make the app in fullscreen (without bar status).
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky, overlays: [
     SystemUiOverlay.bottom,
   ]);
@@ -48,8 +49,6 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
@@ -58,11 +57,13 @@ class MyApp extends StatelessWidget {
         return Consumer<HomeProvider>(
           builder: (context, provider, child) => MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Flutter Demo',
+            title: 'Addicto',
             theme: MyThemes.light,
             darkTheme: MyThemes.dark,
             themeMode: provider.isDark ? ThemeMode.dark : ThemeMode.light,
             onGenerateRoute: AppRoute().generateRoute,
+            // I use this so that the onboarding screen will be seen only the first
+            // time you oopen the app.
             initialRoute: provider.seen ? homescreen : onboarding,
           ),
         );

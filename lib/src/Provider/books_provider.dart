@@ -23,6 +23,7 @@ class BooksProvider with ChangeNotifier {
     _internetitemslist = await initbooks(MyAssets.internetbooks);
   }
 
+  // This function is used to load local json assets (books info).
   Future<List<BookModel>> initbooks(String source) async {
     final response = await rootBundle.loadString(source);
     final data = jsonDecode(response) as List;

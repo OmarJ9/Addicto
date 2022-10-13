@@ -21,12 +21,12 @@ class MyPopUpButton extends StatelessWidget {
       },
       itemBuilder: (context) {
         return [
-          _menuItem(2, 'Two Days', FontAwesomeIcons.chevronRight, context),
-          _menuItem(4, 'Four Days', FontAwesomeIcons.chevronRight, context),
-          _menuItem(7, 'Seven Days', FontAwesomeIcons.chevronRight, context),
-          _menuItem(10, 'Ten Days', FontAwesomeIcons.chevronRight, context),
-          _menuItem(20, 'Twenty Days', FontAwesomeIcons.chevronRight, context),
-          _menuItem(30, 'Thirty Days', FontAwesomeIcons.chevronRight, context),
+          _menuItem(2, '2 Days', FontAwesomeIcons.chevronRight, context),
+          _menuItem(4, '4 Days', FontAwesomeIcons.chevronRight, context),
+          _menuItem(7, '7 Days', FontAwesomeIcons.chevronRight, context),
+          _menuItem(10, '10 Days', FontAwesomeIcons.chevronRight, context),
+          _menuItem(20, '20 Days', FontAwesomeIcons.chevronRight, context),
+          _menuItem(30, '30 Days', FontAwesomeIcons.chevronRight, context),
         ];
       },
     );
@@ -44,7 +44,9 @@ class MyPopUpButton extends StatelessWidget {
             ),
             Text(
               title,
-              style: Theme.of(context).textTheme.subtitle1,
+              style: Theme.of(context).textTheme.headline1!.copyWith(
+                    fontSize: SizeConfig.textMultiplier * 2,
+                  ),
             ),
           ],
         ));

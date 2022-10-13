@@ -19,7 +19,7 @@ class MyDrawer extends StatelessWidget {
         bottom: SizeConfig.heightMultiplier * 10,
       ),
       child: Drawer(
-        backgroundColor: MyColors.mycolors[5],
+        backgroundColor: MyColors.mycolors[4],
         width: SizeConfig.widthMultiplier * 70,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
