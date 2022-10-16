@@ -31,15 +31,17 @@ class HomeProvider with ChangeNotifier {
      if it has already started */
     _isDark = HiveHelper.myprimitivebox.get('isdark') ?? false;
     _seen = HiveHelper.myprimitivebox.get('seen') ?? false;
-    isrunning = HiveHelper.myprimitivebox.get('isrunning') ?? false;
-    final date =
-        DateTime.parse(HiveHelper.myprimitivebox.get('mydate').toString());
     challenges = HiveHelper.mychallengebox.values.toList().cast<Challenge>();
+    isrunning = HiveHelper.myprimitivebox.get('isrunning') ?? false;
 
-    // This is used so that the countdown keep working even if we closed the app.
-    var remaining = date.difference(DateTime.now());
+
 
     if (isrunning) {
+      String? savedDate=HiveHelper.myprimitivebox.get('mydate').toString();
+      final date = DateTime.parse(savedDate);
+
+      // This is used so that the countdown keep working even if we closed the app.
+      var remaining = date.difference(DateTime.now());
       _countdownduration =
           Duration(days: challengedays, seconds: remaining.inSeconds);
     } else {
