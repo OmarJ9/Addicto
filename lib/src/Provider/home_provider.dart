@@ -51,7 +51,6 @@ class HomeProvider with ChangeNotifier {
     isrunning = true;
     _timer =
         Timer.periodic(const Duration(seconds: 1), (_) => coundown(context));
-    notifyListeners();
   }
 
   void coundown(BuildContext context) {

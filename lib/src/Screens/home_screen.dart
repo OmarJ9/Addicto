@@ -5,6 +5,7 @@ import 'package:addicto/src/Widgets/mydrawer.dart';
 import 'package:addicto/src/Widgets/myflat_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import '../Config/size.dart';
 import '../Utils/Services/awesome_notifications.dart';
@@ -24,10 +25,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     if (context.read<HomeProvider>().isrunning) {
-      // This method is used so that we can call the provider from within initstate.
-      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      /*it will be called only once after Build widget done with rendering. Without it
+      * you will get an error [setState() or markNeedsBuild() called during build.].
+      * */
+      context.read<HomeProvider>().startTimer(context);
+      /*      WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
         context.read<HomeProvider>().startTimer(context);
-      });
+      });*/
     }
     super.initState();
   }
@@ -155,7 +159,18 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             SizedBox(height: SizeConfig.heightMultiplier * 3),
                             Expanded(
-                                child: ListView.builder(
+                                child:provider.challenges.isEmpty
+                                    ? Center(
+                                  child: Lottie.asset(
+                                    'assets/json/working-man.json',
+                                    width:
+                                    SizeConfig.widthMultiplier * 100,
+                                    height:
+                                    SizeConfig.widthMultiplier * 100,
+                                    fit: BoxFit.contain,
+                                  ),
+                                )
+                                    : ListView.builder(
                               physics: const BouncingScrollPhysics(),
                               itemCount: provider.challenges.length,
                               itemBuilder: (context, index) {
