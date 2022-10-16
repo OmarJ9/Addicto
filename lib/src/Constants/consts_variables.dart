@@ -107,8 +107,8 @@ List<List<String>> addictionquestions = [
     'Do you prefer social media life over your real life ?',
     'Do you feel stressed when you do not use social media ?',
     'Do you prefer using social media over study ?',
-    'Do you keep watching nonsense videos ?',
-    'Do you think you are addicted to internet ?',
+    'Do you keep watching non sense videos ?',
+    'Do you thing you are addicted to internet ?',
   ]
 ];
 List<QuoteModel> myquotes = [
