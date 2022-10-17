@@ -96,6 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         func: () {
                           if (provider.isrunning) {
                             provider.canceltimer();
+                            //TODO: Notification
                             NotificationsHandler()
                                 .cancelScheduledNotifications();
                             HiveHelper().savePrimitives('isrunning', false);
